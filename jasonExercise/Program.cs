@@ -10,23 +10,27 @@ namespace jasonExercise
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please type a number");
+           Console.WriteLine("Please type a number");
             int result = int.Parse(Console.ReadLine());
-            int resultPlus1 = result + 1;
-            Console.WriteLine("Your new number is:");
-            Console.WriteLine(resultPlus1);
-                if (resultPlus1 % 3 == 0)
+
+            for (int number = 1; number <= result; number++)
+            {
+                bool fizz = number % 3 == 0;
+                bool buzz = number % 5 == 0;
+
+                if (fizz)
                 {
-                Console.WriteLine("fizz");
+                    Console.WriteLine("{0}. fizz", number);
                 }
-                else if (resultPlus1 % 5 == 0)
+                else if (buzz)
                 {
-                Console.WriteLine("buzz");
+                    Console.WriteLine("{0}. buzz", number);
                 }
                 else
                 {
-                Console.WriteLine("The new number is not evenly devisible by 3 or 5. ");
+                    Console.WriteLine("{0}.", number);
                 }
+            }
             Console.ReadLine();
         }
     }
