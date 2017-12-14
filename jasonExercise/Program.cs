@@ -18,7 +18,11 @@ namespace jasonExercise
                 bool fizz = number % 3 == 0;
                 bool buzz = number % 5 == 0;
 
-                if (fizz)
+                if (fizz && buzz)
+                {
+                    Console.WriteLine("{0}. fizzbuzz", number);
+                }
+                else if (fizz)
                 {
                     Console.WriteLine("{0}. fizz", number);
                 }
